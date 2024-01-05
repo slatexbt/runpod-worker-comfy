@@ -1,0 +1,71 @@
+name: Tests
+
+on:
+  push:
+    branches: [main, dev]
+  pull_request:
+    types: [opened, synchronize]
+    branches: [main, dev]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.10"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run Python tests
+        run: python -m unittest discover
+
+      - name: Run snapshot restoration tests
+        run: |
+          chmod +x tests/test_restore_snapshot.sh
+          ./tests/test_restore_snapshot.sh
+# Modified 2024-04-05
+# Modified 2025-03-04
+# Modified 2025-03-10
+# Modified 2025-05-09
+# Modified 2025-10-07
+# Modified 2025-10-15
+# Modified 2025-11-12
+# Modified 2025-12-05
+# Modified 2025-12-24
+# Modified 2024-03-18
+# Modified 2024-06-07
+# Modified 2024-12-11
+# Modified 2025-03-08
+# Modified 2025-03-12
+# Modified 2025-03-18
+# Modified 2025-03-28
+# Modified 2025-05-28
+# Modified 2025-09-13
+# Modified 2025-09-30
+# Modified 2025-12-09
+# Modified 2025-12-11
+# Modified 2024-02-26
+# Modified 2024-03-02
+# Modified 2024-03-11
+# Modified 2024-04-08
+# Modified 2024-06-10
+# Modified 2024-06-28
+# Modified 2024-09-26
+# Modified 2024-11-02
+# Modified 2024-11-15
+# Modified 2024-12-20
+# Modified 2025-04-08
+# Modified 2025-05-22
+# Modified 2025-06-16
+# Modified 2025-07-01
+# Modified 2025-08-06
+# Modified 2025-09-05
+# Modified 2025-11-01
+# Modified 2026-01-05
