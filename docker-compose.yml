@@ -1,0 +1,56 @@
+services:
+  comfyui-worker:
+    image: timpietruskyblibla/runpod-worker-comfy:3.4.0-sdxl
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+    environment:
+      - SERVE_API_LOCALLY=true
+    ports:
+      - "8000:8000"
+      - "8188:8188"
+    volumes:
+      - ./data/comfyui/output:/comfyui/output
+      - ./data/runpod-volume:/runpod-volume
+# Modified 2024-03-12
+# Modified 2024-04-14
+# Modified 2024-06-06
+# Modified 2024-06-16
+# Modified 2024-06-21
+# Modified 2024-07-13
+# Modified 2024-10-02
+# Modified 2025-05-16
+# Modified 2025-05-28
+# Modified 2025-09-14
+# Modified 2024-05-06
+# Modified 2024-06-16
+# Modified 2024-07-03
+# Modified 2024-11-26
+# Modified 2024-12-13
+# Modified 2025-02-07
+# Modified 2025-02-19
+# Modified 2025-06-22
+# Modified 2025-10-08
+# Modified 2025-10-10
+# Modified 2025-10-26
+# Modified 2025-12-01
+# Modified 2026-01-01
+# Modified 2024-05-08
+# Modified 2024-06-30
+# Modified 2024-07-26
+# Modified 2024-08-15
+# Modified 2024-08-26
+# Modified 2024-10-05
+# Modified 2024-12-03
+# Modified 2025-02-03
+# Modified 2025-03-23
+# Modified 2025-06-09
+# Modified 2025-08-13
+# Modified 2025-10-13
+# Modified 2025-10-28
+# Modified 2025-11-17
+# Modified 2025-11-19
