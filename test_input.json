@@ -1,0 +1,99 @@
+{
+  "input": {
+    "workflow": {
+      "3": {
+        "inputs": {
+          "seed": 234234,
+          "steps": 20,
+          "cfg": 8,
+          "sampler_name": "euler",
+          "scheduler": "normal",
+          "denoise": 1,
+          "model": ["4", 0],
+          "positive": ["6", 0],
+          "negative": ["7", 0],
+          "latent_image": ["5", 0]
+        },
+        "class_type": "KSampler"
+      },
+      "4": {
+        "inputs": {
+          "ckpt_name": "sd_xl_base_1.0.safetensors"
+        },
+        "class_type": "CheckpointLoaderSimple"
+      },
+      "5": {
+        "inputs": {
+          "width": 512,
+          "height": 512,
+          "batch_size": 1
+        },
+        "class_type": "EmptyLatentImage"
+      },
+      "6": {
+        "inputs": {
+          "text": "beautiful scenery nature glass bottle landscape, purple galaxy bottle,",
+          "clip": ["4", 1]
+        },
+        "class_type": "CLIPTextEncode"
+      },
+      "7": {
+        "inputs": {
+          "text": "text, watermark",
+          "clip": ["4", 1]
+        },
+        "class_type": "CLIPTextEncode"
+      },
+      "8": {
+        "inputs": {
+          "samples": ["3", 0],
+          "vae": ["4", 2]
+        },
+        "class_type": "VAEDecode"
+      },
+      "9": {
+        "inputs": {
+          "filename_prefix": "ComfyUI/test",
+          "images": ["8", 0]
+        },
+        "class_type": "SaveImage"
+      }
+    }
+  }
+}
+# Modified 2024-05-24
+# Modified 2024-07-16
+# Modified 2024-08-29
+# Modified 2024-09-21
+# Modified 2024-10-18
+# Modified 2025-02-23
+# Modified 2025-08-06
+# Modified 2025-09-15
+# Modified 2025-11-10
+# Modified 2026-01-01
+# Modified 2024-09-29
+# Modified 2024-10-11
+# Modified 2025-02-20
+# Modified 2025-03-01
+# Modified 2025-04-19
+# Modified 2025-05-23
+# Modified 2025-08-10
+# Modified 2025-08-28
+# Modified 2025-08-29
+# Modified 2025-09-17
+# Modified 2025-11-29
+# Modified 2025-12-29
+# Modified 2024-03-29
+# Modified 2024-04-26
+# Modified 2024-07-16
+# Modified 2024-08-06
+# Modified 2024-08-17
+# Modified 2024-10-29
+# Modified 2025-01-17
+# Modified 2025-04-12
+# Modified 2025-05-16
+# Modified 2025-07-13
+# Modified 2025-08-01
+# Modified 2025-08-28
+# Modified 2025-11-12
+# Modified 2025-12-02
