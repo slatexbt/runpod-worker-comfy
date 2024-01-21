@@ -1,0 +1,120 @@
+{
+  "input": {
+    "workflow": {
+      "3": {
+        "inputs": {
+          "seed": 457699577674669,
+          "steps": 3,
+          "cfg": 1.5,
+          "sampler_name": "euler_ancestral",
+          "scheduler": "normal",
+          "denoise": 1,
+          "model": ["4", 0],
+          "positive": ["6", 0],
+          "negative": ["7", 0],
+          "latent_image": ["5", 0]
+        },
+        "class_type": "KSampler",
+        "_meta": {
+          "title": "KSampler"
+        }
+      },
+      "4": {
+        "inputs": {
+          "ckpt_name": "sd_xl_turbo_1.0_fp16.safetensors"
+        },
+        "class_type": "CheckpointLoaderSimple",
+        "_meta": {
+          "title": "Load Checkpoint"
+        }
+      },
+      "5": {
+        "inputs": {
+          "width": 1024,
+          "height": 1024,
+          "batch_size": 1
+        },
+        "class_type": "EmptyLatentImage",
+        "_meta": {
+          "title": "Empty Latent Image"
+        }
+      },
+      "6": {
+        "inputs": {
+          "text": "ancient rome, 4k photo",
+          "clip": ["4", 1]
+        },
+        "class_type": "CLIPTextEncode",
+        "_meta": {
+          "title": "CLIP Text Encode (Prompt)"
+        }
+      },
+      "7": {
+        "inputs": {
+          "text": "text, watermark, blurry, ugly, deformed",
+          "clip": ["4", 1]
+        },
+        "class_type": "CLIPTextEncode",
+        "_meta": {
+          "title": "CLIP Text Encode (Prompt)"
+        }
+      },
+      "8": {
+        "inputs": {
+          "samples": ["3", 0],
+          "vae": ["4", 2]
+        },
+        "class_type": "VAEDecode",
+        "_meta": {
+          "title": "VAE Decode"
+        }
+      },
+      "9": {
+        "inputs": {
+          "filename_prefix": "images/rome",
+          "images": ["8", 0]
+        },
+        "class_type": "SaveImage",
+        "_meta": {
+          "title": "Save Image"
+        }
+      }
+    }
+  }
+}
+# Modified 2024-03-05
+# Modified 2024-03-19
+# Modified 2024-03-21
+# Modified 2024-04-15
+# Modified 2024-07-31
+# Modified 2024-09-30
+# Modified 2025-03-12
+# Modified 2025-04-25
+# Modified 2025-07-02
+# Modified 2025-11-11
+# Modified 2026-01-02
+# Modified 2026-01-12
+# Modified 2024-08-09
+# Modified 2024-08-10
+# Modified 2024-09-09
+# Modified 2024-10-02
+# Modified 2025-01-16
+# Modified 2025-03-04
+# Modified 2025-05-06
+# Modified 2025-07-07
+# Modified 2025-10-30
+# Modified 2025-10-31
+# Modified 2025-12-22
+# Modified 2024-03-08
+# Modified 2024-03-18
+# Modified 2024-03-19
+# Modified 2024-12-10
+# Modified 2024-12-16
+# Modified 2024-12-24
+# Modified 2025-02-12
+# Modified 2025-05-12
+# Modified 2025-07-07
+# Modified 2025-10-11
+# Modified 2025-10-14
+# Modified 2025-11-04
+# Modified 2025-12-25
