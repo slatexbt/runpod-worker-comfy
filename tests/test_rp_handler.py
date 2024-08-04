@@ -275,3 +275,4 @@ class TestRunpodWorkerComfy(unittest.TestCase):
 # Modified 2024-06-17
 # Modified 2024-06-19
 # Modified 2024-07-18
+# Modified 2024-08-04
