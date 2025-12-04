@@ -63,3 +63,4 @@ echo "runpod-worker-comfy: restored snapshot file: $SNAPSHOT_FILE"# Modified 202
 # Modified 2025-07-31
 # Modified 2025-08-25
 # Modified 2025-12-02
+# Modified 2025-12-04
